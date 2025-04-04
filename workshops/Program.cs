@@ -138,3 +138,208 @@ while (spelaIgen)
 */
 
 
+/* 7.
+Console.WriteLine("Skriv en mening: ");
+string mening = Console.ReadLine();
+Console.WriteLine("Välj en bokstav att räkna förekomsten av: ");
+string bokstav = Console.ReadLine();
+
+char sökBokstav = bokstav[0];
+int antal = 0;
+
+foreach (char tecken in mening)
+{
+    if (tecken == sökBokstav)
+    { 
+        antal++; 
+    }
+}
+
+Console.WriteLine($"{sökBokstav} förekommer {antal} gånger");
+*/
+
+/* 8.
+Console.WriteLine("Skriv en mening: ");
+string mening = Console.ReadLine().ToLower();
+int antalA = 0;
+int antalE = 0;
+int antalI = 0;
+int antalO = 0;
+int antalU = 0;
+int antalY = 0;
+
+foreach (char tecken in mening)
+{
+    switch (tecken)
+    {
+        case 'a':
+            antalA++;
+            break;
+        case 'e':
+            antalE++;
+            break;
+        case 'i':
+            antalI++;
+            break;
+        case 'o':
+            antalO++;
+            break;
+        case 'u':
+            antalU++;
+            break;
+        case 'y':
+            antalY++;
+            break;
+    }
+}
+
+Console.WriteLine($"I Strängen finns:");
+Console.WriteLine($"a:{antalA}");
+Console.WriteLine($"e:{antalE}");
+Console.WriteLine($"i:{antalI}");
+Console.WriteLine($"o:{antalO}");
+Console.WriteLine($"u:{antalU}");
+Console.WriteLine($"y:{antalY}");
+*/
+
+/* 9
+Console.WriteLine("Skriv ett tal:");
+int tal = int.Parse(Console.ReadLine());
+
+bool prim = true;
+
+if (tal <= 1) 
+{
+    prim = false; 
+}
+
+else
+{
+    for (int i = 2; i <= Math.Sqrt(tal); i++)
+    {
+        if (tal % i == 0)
+        {
+            prim = false;
+            break;
+        }
+    }
+}
+
+if (prim)
+{
+    Console.WriteLine($"{tal} är ett primtal");
+}
+else
+{
+    Console.WriteLine($"{tal} är inte ett primtal");
+}
+*/
+
+/* 10.
+Console.WriteLine("Hur många tal vill du mata in (Max 30)?");
+int antal = int.Parse(Console.ReadLine());
+
+if ( antal > 30 || antal < 0)
+{
+    Console.WriteLine("Du måste skriva ett tal mellan 1 och 30");
+    return;
+}
+
+int[] tal = new int[antal];
+
+for (int i = 0; i < tal.Length; i++)
+{
+    Console.WriteLine($"Tal {i + 1}: ");
+    tal[i] = int.Parse(Console.ReadLine());
+}
+
+int summa = 0;
+int min = tal[0];
+int max = tal[0];
+
+for (int i = 0; i < antal; i++)
+{
+    summa += tal[i];
+
+    if (tal[i] < min)
+        min = tal[i];
+
+    if (tal[i] > max)   
+        max = tal[i];
+}
+
+double medel = (double)summa / antal;
+
+Console.WriteLine($"\nSumma: {summa}");
+Console.WriteLine($"\nMedelvärde: {medel}");
+Console.WriteLine($"\nMinsta värde: {min}");
+Console.WriteLine($"\nStörsta värde: {max}");
+*/
+
+/* 11.
+Console.WriteLine("Hur många studenter ska betyget matas in för?");
+int antalStudenter = int.Parse(Console.ReadLine()); 
+
+int[] betyg = new int[antalStudenter];
+
+for (int i = 0; i < antalStudenter; i++)
+{
+    Console.WriteLine($"Ange betyget för student {i + 1}:");
+    betyg[i] = int.Parse(Console.ReadLine());   
+}
+
+int summa = 0;
+for (int i = 0;i < antalStudenter; i++)
+{
+    summa += betyg[i];
+}
+
+double medel = (double)summa / antalStudenter;
+
+Console.WriteLine($"Det genomsnittliga betyget för gruppen är: {medel}:");
+*/
+
+/* 12.
+Console.WriteLine("Ange en sträng:");
+string input  = Console.ReadLine();
+
+Console.WriteLine($"Antal tecken i strängen: {RäknaTecken(input)}");
+Console.WriteLine($"Strämngen i versaler: {TillVersaler(input)}");
+Console.WriteLine($"Strängen i gemener: {TillGemener(input)}");
+
+if (palindrom(input))
+{
+    Console.WriteLine("Strängen är en palindrom");
+}
+else
+{
+    Console.WriteLine("Strängen är inte en palindrom");
+}
+
+static int RäknaTecken(string input)
+{
+    return input.Length;
+}
+
+static string TillVersaler(string input)
+{
+    return input.ToUpper();
+
+}
+
+static string TillGemener(string input)
+{
+    return input.ToLower();
+
+}
+
+static bool palindrom (string input)
+{
+    string små = input.ToLower();
+    char[] tecken = små.ToCharArray();
+    Array.Reverse(tecken);
+    string baklänges = new string(tecken);
+
+    return små == baklänges;
+}
+*/
