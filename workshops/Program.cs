@@ -1,4 +1,4 @@
-﻿/*
+﻿/* 1.
 Console.WriteLine("Ange pris exklusive moms:");
 string input  = Console.ReadLine();
 int inputInt = int.Parse(input);
@@ -6,7 +6,7 @@ double Moms = inputInt * 1.25;
 Console.WriteLine(Moms);
 */
 
-/*
+/* 2.
 Console.WriteLine("Ange pris inklusive moms:");
     string input  = Console.ReadLine();
     int inputInt = int.Parse(input);
@@ -14,7 +14,7 @@ Double noMoms = inputInt * 0.8;
 Console.WriteLine(noMoms);
 */
 
-/*
+/* 3.
 const decimal Moms = 0.25m;
 
 Console.WriteLine("Ange pris exklusive moms:");
@@ -26,7 +26,7 @@ decimal totpris = MomsTot + input;
 Console.WriteLine(totpris);
 */
 
-/*
+/* 4.
 int x, y;
 
 x=4; y=2;
@@ -58,7 +58,7 @@ x=-y;
 Console.WriteLine($"y={y}    x={x}");
 */
 
-/*
+/* 5.
 Console.WriteLine("Skriv ditt första tal:");
 int a = int.Parse(Console.ReadLine());
 
@@ -88,7 +88,7 @@ int middle = tal[3];
 Console.WriteLine($"Talet i mitten är {middle}");
 */
 
-/*
+/* 6.
  bool spelaIgen = true;
 
 while (spelaIgen)
